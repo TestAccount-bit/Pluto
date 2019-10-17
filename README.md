@@ -1,2 +1,2 @@
 # Pluto
-Repository for stydying
+Repository for studying
