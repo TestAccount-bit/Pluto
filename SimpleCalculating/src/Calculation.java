@@ -5,11 +5,6 @@ public class Calculation {
 
 	public static void main(String[] args) {
 		
-		Scan);
-		
-		boolean[] primeNumbers = new boolean[n];
-		for(int i=0;i<n;i++) {
-			primeNumbers[i] = true;
 		}
 		
 		for(int i=2;i<max;i++) {
