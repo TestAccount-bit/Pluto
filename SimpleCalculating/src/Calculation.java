@@ -5,7 +5,6 @@ public class Calculation {
 
 	public static void main(String[] args) {
 		
-		
 		Scanner input = new Scanner(System.in);
 		System.out.println("Program outups all prime numbers, smaller than x.");
 		System.out.println("Enter x:");
