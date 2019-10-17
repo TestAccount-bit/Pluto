@@ -1,0 +1,2 @@
+module myTestProject {
+}
