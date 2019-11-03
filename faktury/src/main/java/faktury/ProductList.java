@@ -2,10 +2,10 @@ package faktury;
 
 import java.util.List;
 
-public class ProductIsExists {
+public class ProductList {
 	List<Product> products;
 	
-	public ProductIsExists(List<Product> products) {
+	public ProductList(List<Product> products) {
 		this.products = products;
 	}
 	
@@ -24,5 +24,14 @@ public class ProductIsExists {
 		if (exists)
 			return true;
 		return false;
+	}
+	
+	public int returnIndex(String productName) {
+		for (int i=0;i<this.products.size();i++) {
+			if (this.products.get(i).getName().equals(productName)) {
+				return i;
+			}
+		}
+		return 0;
 	}
 }

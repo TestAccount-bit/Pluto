@@ -10,7 +10,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		Scanner myObj = new Scanner(System.in);
-		
+		String[] faktura = new String[255];
 		float Sum = 0;
 		
 		System.out.println("Dostepne artykuly spozywcze:");
@@ -20,19 +20,38 @@ public class Main {
         }
         System.out.println("\nProsze wybrac artykuly:");
         
-        while(true) {
-        	ProductIsExists obj = new ProductIsExists(products);
-        	String product = myObj.nextLine();
+        String product = myObj.nextLine();
+        while(product.equals("exit") == false) {
+        	ProductList obj = new ProductList(products);
+        	Sum = 0;
+        	int counter = 0;
+        	int amount = 0;
         	while (product.equals("faktura") == false) {
         		if (obj.IsExists(product)) {
-        			System.out.println("OK");
+        			System.out.println("Amount:");
+        			amount = Integer.parseInt(myObj.nextLine());
+        			float price = products.get(obj.returnIndex(product)).getPrice();
+        			System.out.println(price*amount);
+        			faktura[counter] = product + " - " + price + " x" + amount + " " + price*amount;
+        			counter++;
+        			Sum=Sum + price*amount;
+        		}
+        		else {
+        			System.out.println("Artykul spozywczy nie jest dostepny.");
         		}
         		product = myObj.nextLine();
         	}
         	
-        	System.out.println("Nowa faktura");
+        	System.out.println("\n-------PARAGON FISKALNY-------");
+        	for(int i=0;i<counter;i++) {
+        		System.out.println(faktura[i]);
+        	}
+        	System.out.println("\nRazem:" + Sum);
+        	System.out.println("------------------------------");
+        	
+        	System.out.println("Nowa faktura:");
+        	product = myObj.nextLine();
         }
-
+        myObj.close();
 	}
-
 }
