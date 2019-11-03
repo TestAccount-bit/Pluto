@@ -3,7 +3,7 @@ package faktury;
 import java.util.List;
 
 public class ProductList {
-	List<Product> products;
+	private List<Product> products;
 	
 	public ProductList(List<Product> products) {
 		this.products = products;
