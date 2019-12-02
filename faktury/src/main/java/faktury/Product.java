@@ -1,10 +1,10 @@
 package faktury;
 
 public class Product {
-	private String name;
-	private float price;
+	private final String name;
+	private final float price;
 	
-	public Product(String name, float price) {
+	public Product(final String name,final float price) {
 		this.name = name;
 		this.price = price;
 	}

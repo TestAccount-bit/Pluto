@@ -11,7 +11,7 @@ import java.util.List;
 
 public class CSVReader{
 
-    public static List<Product> readBooksFromCSV(String fileName) {
+    public static List<Product> readFromCSV(String fileName) {
         List<Product> products = new ArrayList<>();
         Path pathToFile = Paths.get(fileName);
         

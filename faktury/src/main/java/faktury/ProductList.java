@@ -3,13 +3,14 @@ package faktury;
 import java.util.List;
 
 public class ProductList {
+	//List of products
 	private List<Product> products;
 	
 	public ProductList(List<Product> products) {
 		this.products = products;
 	}
 	
-	public boolean IsExists(String productName) {
+	public boolean isExists(final String productName) {
 		
 		
 		boolean exists = false;
