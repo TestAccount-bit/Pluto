@@ -16,6 +16,9 @@ public class Faktura {
 	}
 	
 	public void print() {
+		System.out.println("Napisz \"faktura\" zeby skonczyc zakup,");
+		System.out.println("Napisz \"exit\" zeby skonczyc");
+		System.out.println("---------------------------------------");
 		System.out.println("Dostepne artykuly spozywcze:");
 	    List<Product> products = CSVReader.readFromCSV(PRODUCTLIST);
 	    for (Product pr : products) {
